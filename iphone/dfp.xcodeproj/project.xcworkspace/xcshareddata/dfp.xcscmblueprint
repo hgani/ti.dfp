@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "20651204B44349A3388B65F145956451602501DA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3275910D-EA9D-47D6-B804-A381DBA5C817" : 0,
+    "20651204B44349A3388B65F145956451602501DA" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8903F322-3A16-4985-A58A-05C94F37C486",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3275910D-EA9D-47D6-B804-A381DBA5C817" : "titanium_modules",
+    "20651204B44349A3388B65F145956451602501DA" : "ti.dfp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "dfp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iphone\/dfp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jpriebe\/ti.dfp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "20651204B44349A3388B65F145956451602501DA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jpriebe\/titanium_modules.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3275910D-EA9D-47D6-B804-A381DBA5C817"
+    }
+  ]
+}
