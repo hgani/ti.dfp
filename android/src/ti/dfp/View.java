@@ -7,6 +7,8 @@ import org.appcelerator.titanium.view.TiUIView;
 
 import android.os.Bundle;
 import android.location.Location;
+
+import java.util.Date;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -125,6 +127,14 @@ public class View extends TiUIView {
                 {
                     adRequestBuilder.setLocation (DfpModule.LOCATION);
                 }
+                if (DfpModule.GENDER != null)
+                {
+    				adRequestBuilder.setGender(DfpModule.GENDER);	
+                }
+                if (DfpModule.BIRTH_DATE != null)
+                {
+    				adRequestBuilder.setBirthday(DfpModule.BIRTH_DATE);	
+                }
 
 				Log.d (TAG, "[ti.dfp] requestAd ()");
 				if (DfpModule.TEST_DEVICES != null) 
@@ -210,6 +220,31 @@ public class View extends TiUIView {
 					DfpModule.LOCATION = l;
 				}
  			}
+			if (d.containsKey("gender")) {
+				String g = d.getString("gender");
+				if (g != null) {
+					if (g.equals("male")) {
+						DfpModule.GENDER = PublisherAdRequest.GENDER_MALE;
+					}
+					else if (g.equals("female")) {
+						DfpModule.GENDER = PublisherAdRequest.GENDER_FEMALE;
+					}
+					else {
+						DfpModule.GENDER = PublisherAdRequest.GENDER_UNKNOWN;
+					}
+ 					Log.d (TAG, "[ti.dfp] has gender: " + g + " -> " + DfpModule.GENDER);
+				}
+ 			}
+			if (d.containsKey("birthTimestamp")) {
+				// KrollDict doesn't support long
+				Double timestamp = d.getDouble("birthTimestamp");
+
+				if (timestamp != null) {
+					DfpModule.BIRTH_DATE = new Date(timestamp.longValue());
+ 					Log.d (TAG, "[ti.dfp] has birth date: " + DfpModule.BIRTH_DATE + " (" + timestamp.longValue() + ")");
+				}
+			}
+
 			if (d.containsKey(DfpModule.PROPERTY_COLOR_BG)) {
 				Log.d (TAG, "[ti.dfp] has PROPERTY_COLOR_BG: " + d.getString(DfpModule.PROPERTY_COLOR_BG));
 				prop_color_bg = convertColorProp(d.getString(DfpModule.PROPERTY_COLOR_BG));

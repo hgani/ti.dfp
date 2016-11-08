@@ -9,6 +9,7 @@
 package ti.dfp;
 
 import java.io.IOException;
+import java.util.Date;
 
 import org.appcelerator.kroll.KrollModule;
 import org.appcelerator.kroll.annotations.Kroll;
@@ -22,7 +23,6 @@ import org.appcelerator.kroll.common.TiConfig;
 
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.AdSize;
-
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.ads.identifier.AdvertisingIdClient;
@@ -46,6 +46,8 @@ public class DfpModule extends KrollModule
 	public static String ADUNIT_ID;
 
     public static Location LOCATION = null;
+    public static Integer GENDER = null;
+    public static Date BIRTH_DATE = null;
 
     public static Bundle CUSTOM_TARGETING = null;
 
