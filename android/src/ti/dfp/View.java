@@ -12,6 +12,8 @@ import java.util.Date;
 import java.util.Map;
 import java.util.HashMap;
 
+import android.view.ViewGroup;
+
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.AdSize;
@@ -45,6 +47,7 @@ public class View extends TiUIView {
 		    Log.d (TAG, "[ti.dfp] createView()");
             // create the adView
             adView = new PublisherAdView(proxy.getActivity());
+            adView.setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
 
             if(DfpModule.AD_SIZES != null)
             {

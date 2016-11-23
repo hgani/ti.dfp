@@ -94,6 +94,8 @@ An array of dictionaries to set the [MultipleAdSizes](https://developers.google.
 ### boolean autoResize (optional)
 
 Resize the view to the dimensions of the ad.
+
+
 ## Functions
 
 ### requestAd()
